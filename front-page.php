@@ -4,7 +4,12 @@
 	</div>
 	<section>
 		<div class="col-sm-4">
-			ÁREAS DE CURSO
+			<?php if ( is_active_sidebar( 'home_left_sidebar' ) ) : ?>
+			<div id="home-left-sidebar" class="home-sidebar widget-area" role="complementary">
+				<?php dynamic_sidebar( 'home_left_sidebar' ); ?>
+			</div><!-- #home-left-sidebar -->
+			<?php endif; ?>
+
 		</div>
 		<?php $latest = new WP_Query('posts_per_page=2&post_type=post&category_name=noticias'); if ($latest->have_posts()) : ?>
 		<?php while ($latest->have_posts()) : $latest->the_post(); ?>
