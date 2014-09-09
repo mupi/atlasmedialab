@@ -1,13 +1,20 @@
-<header class="banner navbar navbar-default navbar-static-top" role="banner">
+<header class="banner navbar navbar-static-top" role="banner">
   <div class="container">
+    <div class="brand-header">
+        <div class="logo">
+          <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>">
+            <?php theme_logo(); ?>
+          </a>
+        </div>
+        <div class="search-form">
+          <?php get_search_form(); ?>
+        </div>
+    </div>
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        MENU
       </button>
-      <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
     </div>
 
     <nav class="collapse navbar-collapse" role="navigation">

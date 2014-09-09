@@ -32,3 +32,9 @@ foreach ($roots_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+
+function new_excerpt_more( $more ) {
+  return ' [...]';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
