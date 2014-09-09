@@ -2,7 +2,7 @@
 	<div class="home-slider">
 		<?php the_content(); ?>
 	</div>
-	<section>
+	<section class="midle-section">
 		<div class="col-sm-4">
 			<?php if ( is_active_sidebar( 'home_left_sidebar' ) ) : ?>
 			<div id="home-left-sidebar" class="home-sidebar widget-area" role="complementary">
