@@ -38,6 +38,10 @@ function new_excerpt_more( $more ) {
   return ' [...]';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+function new_excerpt_length($length) {
+  return 30;
+}
+add_filter('excerpt_length', 'new_excerpt_length');
 
 /**
  * Register our sidebars and widgetized areas.
@@ -48,7 +52,9 @@ function home_widgets_init() {
   register_sidebar( array(
     'name' => 'Home left sidebar',
     'id' => 'home_left_sidebar',
-    'before_title' => '<h2 class="rounded">',
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '<h2 class="title">',
     'after_title' => '</h2>',
   ) );
 }
