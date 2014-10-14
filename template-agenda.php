@@ -10,10 +10,10 @@ Template Name: Agenda
     $args = array(
         'posts_per_page' => 10,
         'post_type' => 'curso',
-        'meta_key' => strtotime('course_date'),
+        'meta_key' => 'wpcf-course_date',
         'meta_value' => strtotime($today),
         'meta_compare' => '>=',
-        'orderby' => 'meta_value_num',
+        'orderby' => 'meta_value',
         'order' => 'ASC'
     );
     query_posts($args);
@@ -22,11 +22,12 @@ Template Name: Agenda
 <?php
 	$cont = 0;
     while (have_posts()) : the_post();
+
     	$course_date = types_render_field("course_date", array("style" => "text", "format" => "j/m/Y"));
-    	list ($c_dia, $c_mes, $c_ano) = split ('[/.-]', $course_date);
+    list ($c_dia, $c_mes, $c_ano) = split ('[/.-]', $course_date);
 ?>
 	<?php 
-	if (($c_dia >= date("j")) && ($c_mes >= date("m"))) { 
+	//if (($c_dia >= date("j")) && ($c_mes >= date("m"))) { 
 		$cont_aux = $cont;
     	$cont++;
 	?>
@@ -74,7 +75,7 @@ Template Name: Agenda
 		}
 	?>
 	<?php
-    	}; //end if showing only next courses
+    //	}; //end if showing only next courses
     ?>
 <?php
     endwhile;
