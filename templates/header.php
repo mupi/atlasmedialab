@@ -3,7 +3,13 @@
     <div class="brand-header">
         <div class="logo">
           <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>">
-            <?php theme_logo(); ?>
+            <?php 
+              if (function_exists('theme_logo')){
+                theme_logo(); 
+              } else {
+                bloginfo('name'); 
+              };
+            ?>
           </a>
         </div>
         <div class="search-form">

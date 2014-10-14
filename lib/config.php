@@ -55,7 +55,8 @@ function roots_display_sidebar() {
      */
     array(
       'template-custom.php',
-      'template-agenda.php'
+      'template-agenda.php',
+      'template-courses.php'
     )
   );
 
