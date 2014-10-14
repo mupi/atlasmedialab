@@ -3,15 +3,22 @@
     <div class="brand-header">
         <div class="logo">
           <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>">
-            <?php 
+            <?php
               if (function_exists('theme_logo')){
-                theme_logo(); 
+                theme_logo();
               } else {
-                bloginfo('name'); 
+                bloginfo('name');
               };
             ?>
           </a>
         </div>
+
+        <?php if ( is_active_sidebar( 'social-icons' ) ) : ?>
+          <div id="social-icons-sidebar" class="social-icons" role="complementary">
+            <?php dynamic_sidebar( 'social-icons' ); ?>
+          </div><!-- #social-icons -->
+        <?php endif; ?>
+
         <div class="search-form">
           <?php get_search_form(); ?>
         </div>

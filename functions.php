@@ -59,3 +59,20 @@ function home_widgets_init() {
   ) );
 }
 add_action( 'widgets_init', 'home_widgets_init' );
+
+/**
+ * Register widgetized area for social icons.
+ *
+ */
+function social_icons_init() {
+
+  register_sidebar( array(
+    'name' => 'Social Icons sidebar',
+    'id' => 'social-icons',
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '',
+    'after_title' => '',
+  ) );
+}
+add_action( 'widgets_init', 'social_icons_init' );
