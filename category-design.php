@@ -1,20 +1,9 @@
-<?php
-/*
-Template Name: Cursos
-*/
-?>
+<?php get_template_part('templates/page', 'header'); ?>
 
 <?php
-	$today = date("m/j/Y");
-    /** array com as configurações da query **/
     $args = array(
-        'posts_per_page' => 10,
         'post_type' => 'curso',
-        'meta_key' => strtotime('course_date'),
-        'meta_value' => strtotime($today),
-        'meta_compare' => '>=',
-        'orderby' => 'meta_value_num',
-        'order' => 'ASC'
+        'category_name' => 'design',
     );
     query_posts($args);
 ?>

@@ -48,7 +48,10 @@ function roots_display_sidebar() {
     array(
       'is_404',
       'is_front_page',
-      array('is_singular', 'curso')
+      array('is_singular', 'curso'),
+      array('is_category', 'audiovisual'),
+      array('is_category', 'design'),
+      array('is_category', 'marketing-digital')
     ),
     /**
      * Page template checks (via is_page_template())
