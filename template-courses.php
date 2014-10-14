@@ -32,39 +32,34 @@ Template Name: Cursos
 			echo "<div class='row'>";
 		}
 	?>
-	
+
     <article <?php post_class('col-sm-4'); ?>>
     	<div class="card-curso">
             <header>
             	<a href="<?php the_permalink(); ?>">
-	            	<?php 
+	            	<?php
 	            	$postid = get_the_ID();
-	            	echo get_the_post_thumbnail( 
+	            	echo get_the_post_thumbnail(
 	            		$postid,
 	            		'full',
 	            		array(
 	            		'class'	=> "img-responsive"
 	            		)
-	            	); 
+	            	);
 	            	?>
             	</a>
             </header>
-        	<a href="<?php the_permalink(); ?>">
+        	  <a href="<?php the_permalink(); ?>">
           		<h2 class="entry-title"><?php the_title(); ?></h2>
           	</a>
 
-            	Próxima turma: 
-	            <span class="course-date">
-	            	<?php echo $course_date; ?>
-	            </span>
-	        
-          	<?php 
+          	<?php
           		if (types_render_field("cidade" , array( "output" => "raw" )) != ""){
           			echo "<span>".types_render_field("cidade", array( "output" => "raw" ))."</span>";
           		};
-          	?>   
+          	?>
     </article>
-    
+
     <?php
 		if ($cont % 3 == 0){
 			echo "</div>";
@@ -75,4 +70,4 @@ Template Name: Cursos
 ?>
 </div>
 
- <?php wp_reset_query(); ?> 
+ <?php wp_reset_query(); ?>
