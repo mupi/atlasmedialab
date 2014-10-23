@@ -13,6 +13,7 @@ Template Name: Página de curso
 	    <div class="entry-content">
 	      <?php the_content(); ?>
 	    </div>
+	    <?php comments_template('/templates/comments.php'); ?>
 	</div>
     <div class="col-sm-5">
 		<?php
