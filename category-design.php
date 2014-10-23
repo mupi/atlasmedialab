@@ -16,7 +16,6 @@
 ?>
     <?php
         $course_date = types_render_field("course_date", array("style" => "text", "format" => "j/m/Y"));
-        list ($c_dia, $c_mes, $c_ano) = split ('[/.-]', $course_date);
     ?>
     <?php
         if (($cont == 1) || ($cont_aux % 3 == 0)){
