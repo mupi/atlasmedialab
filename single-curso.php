@@ -18,7 +18,7 @@ Template Name: Página de curso
     <div class="col-sm-5">
 		<?php
 			echo get_the_post_thumbnail(
-										$postid,
+										get_the_ID(),
 					            		'full',
 					            		array(
 					            		'class'	=> "img-responsive"
