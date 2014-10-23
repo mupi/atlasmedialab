@@ -24,7 +24,6 @@ Template Name: Agenda
     while (have_posts()) : the_post();
 
     	$course_date = types_render_field("course_date", array("style" => "text", "format" => "j/m/Y"));
-    list ($c_dia, $c_mes, $c_ano) = split ('[/.-]', $course_date);
 ?>
 	<?php
 	//if (($c_dia >= date("j")) && ($c_mes >= date("m"))) {
